@@ -1,11 +1,18 @@
 'use strict'
 
+const snapshot = require('snap-shot')
 
 /* global describe, it */
-const newPublicCommits = require('.')
+describe('isPublicCommit', () => {
+  const {isPublicCommit} = require('.')
 
-describe('new-public-commits', () => {
-  it('write this test', () => {
-    console.assert(newPublicCommits, 'should export something')
+  it('determines public value', () => {
+    snapshot(
+      isPublicCommit,
+      {message: 'feat(foo): add feature foo'},
+      {message: 'fix(log): update log config'},
+      {message: 'chore(ci): something with ci'},
+      {message: 'whatever message'}
+    )
   })
 })

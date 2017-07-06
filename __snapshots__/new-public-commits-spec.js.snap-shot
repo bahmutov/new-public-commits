@@ -1,0 +1,30 @@
+exports['determines public value 1'] = {
+  "name": "isPublicCommit",
+  "behavior": [
+    {
+      "given": {
+        "message": "feat(foo): add feature foo"
+      },
+      "expect": true
+    },
+    {
+      "given": {
+        "message": "fix(log): update log config"
+      },
+      "expect": true
+    },
+    {
+      "given": {
+        "message": "chore(ci): something with ci"
+      },
+      "expect": false
+    },
+    {
+      "given": {
+        "message": "whatever message"
+      },
+      "expect": false
+    }
+  ]
+}
+
