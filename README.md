@@ -19,7 +19,7 @@ npm install --save new-public-commits
 ## Use
 
 ```js
-const newPublicCommits = require('new-public-commits')
+const {newPublicCommits} = require('new-public-commits')
 newPublicCommits()
   .then(console.log)
 /*
