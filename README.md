@@ -18,6 +18,20 @@ npm install --save new-public-commits
 
 ## Use
 
+```js
+const newPublicCommits = require('new-public-commits')
+newPublicCommits()
+  .then(console.log)
+/*
+  only prints "public" commit types like "feat", "major" and "fix"
+  but no chores or non-semantic
+
+  [ { id: '93a77df4198fb8b7e7b5c4cc71bb5930037dd979',
+    message: 'feat(code): initial code',
+    body: '' } ]
+*/
+```
+
 ### Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2017

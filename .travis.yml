@@ -11,6 +11,7 @@ before_script:
 script:
   - ./next-update-travis.sh
   - npm test
+  - npm run demo
 after_success:
   - npm run semantic-release
 branches:
