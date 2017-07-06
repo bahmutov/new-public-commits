@@ -60,7 +60,8 @@
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "test": "npm run unit",
     "unit": "mocha src/*-spec.js",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "demo": "node -e 'require(\".\").newPublicCommits().then(console.log)'"
   },
   "devDependencies": {
     "ban-sensitive-files": "1.9.0",
