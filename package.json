@@ -68,7 +68,7 @@
     "dependency-check": "2.9.1",
     "deps-ok": "1.2.0",
     "git-issues": "1.3.1",
-    "license-checker": "12.0.0",
+    "license-checker": "12.1.0",
     "mocha": "3.4.2",
     "next-update-travis": "1.4.0",
     "nsp": "2.6.3",
@@ -79,7 +79,7 @@
   },
   "dependencies": {
     "check-more-types": "2.24.0",
-    "ggit": "1.17.2",
+    "ggit": "1.20.0",
     "lazy-ass": "1.6.0",
     "simple-commit-message": "3.1.0"
   }
