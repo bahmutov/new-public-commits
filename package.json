@@ -55,6 +55,8 @@
     "issues": "git-issues",
     "license": "license-checker --production --onlyunknown --csv",
     "lint": "standard --verbose --fix src/*.js",
+    "pretty": "prettier-standard 'src/*.js'",
+    "prelint": "npm run pretty",
     "pretest": "npm run lint",
     "secure": "nsp check",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
@@ -74,14 +76,17 @@
     "next-update-travis": "1.4.0",
     "nsp": "2.6.3",
     "pre-git": "3.15.0",
+    "prettier-standard": "6.0.0",
     "semantic-release": "^6.3.6",
     "snap-shot": "2.17.0",
     "standard": "10.0.2"
   },
   "dependencies": {
     "check-more-types": "2.24.0",
+    "debug": "2.6.8",
     "ggit": "1.20.0",
     "lazy-ass": "1.6.0",
+    "pluralize": "5.0.0",
     "simple-commit-message": "3.1.0"
   },
   "release": {

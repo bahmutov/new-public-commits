@@ -1,9 +1,11 @@
 'use strict'
 
+const debug = require('debug')('new-public-commits')
 const ggit = require('ggit')
 const simple = require('simple-commit-message')
 const la = require('lazy-ass')
 const is = require('check-more-types')
+const pluralize = require('pluralize')
 
 function isPublicCommit (commit) {
   la(commit, 'missing commit object', commit)
@@ -19,12 +21,14 @@ function isPublicCommit (commit) {
 }
 
 function leavePublic (commits) {
-  return commits.filter(isPublicCommit)
+  debug('filtering %s', pluralize('commit', commits.length, true))
+  const publicCommits = commits.filter(isPublicCommit)
+  debug('%d public %s', commits.length, pluralize('commit', commits.length))
+  return publicCommits
 }
 
 function newPublicCommits () {
-  return ggit.commits.afterLastTag()
-    .then(leavePublic)
+  return ggit.commits.afterLastTag().then(leavePublic)
 }
 
 module.exports = {

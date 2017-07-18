@@ -28,3 +28,12 @@ exports['determines public value 1'] = {
   ]
 }
 
+exports['leaves public commits 1'] = [
+  {
+    "message": "feat(foo): add feature foo"
+  },
+  {
+    "message": "fix(log): update log config"
+  }
+]
+

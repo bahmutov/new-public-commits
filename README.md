@@ -32,6 +32,11 @@ newPublicCommits()
 */
 ```
 
+## Debugging
+
+To see more debug messages, run with `DEBUG=new-public-commits` environment
+variable
+
 ### Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2017
