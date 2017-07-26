@@ -27,8 +27,9 @@ function leavePublic (commits) {
   return publicCommits
 }
 
-function newPublicCommits () {
-  return ggit.commits.afterLastTag().then(leavePublic)
+function newPublicCommits (sha) {
+  const gitGet = sha ? ggit.commits.after(sha) : ggit.commits.afterLastTag()
+  return gitGet.then(leavePublic)
 }
 
 module.exports = {

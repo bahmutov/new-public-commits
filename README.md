@@ -32,6 +32,13 @@ newPublicCommits()
 */
 ```
 
+You can pass commit SHA to find all public commits after that commit
+
+```js
+newPublicCommits('4e5ff0...')
+  .then(console.log)
+```
+
 ## Debugging
 
 To see more debug messages, run with `DEBUG=new-public-commits` environment
