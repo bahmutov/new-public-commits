@@ -84,7 +84,7 @@
   "dependencies": {
     "check-more-types": "2.24.0",
     "debug": "2.6.8",
-    "ggit": "2.0.2",
+    "ggit": "2.2.0",
     "lazy-ass": "1.6.0",
     "pluralize": "6.0.0",
     "simple-commit-message": "3.3.1"
